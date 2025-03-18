@@ -46,7 +46,8 @@ jobs:
 
       - name: Add jks file
         run: |
-          echo ${{ secrets.SIGN_KEY }} > encoded_key
+          echo ${{ secrets.SIGN_KEY }} > ./encoded_key
+          ls
           base64 -Dd -i encoded_key > key.jks
 
       - name: Build apk
