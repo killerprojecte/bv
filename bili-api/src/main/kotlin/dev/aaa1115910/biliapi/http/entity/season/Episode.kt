@@ -112,7 +112,7 @@ data class Episode(
     @Serializable
     data class EpisodeRights(
         @SerialName("allow_demand")
-        val allowDemand: Int,
+        val allowDemand: Int? = null,
         @SerialName("allow_dm")
         val allowDm: Int,
         @SerialName("allow_download")
